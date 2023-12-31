@@ -1,7 +1,18 @@
-import { AuthenticatedPrincipal } from "./models/authenticated-principal";
+export {
+    getClaimByName,
+    getIdTokenExpiration,
+    getClaimsByName,
+    AuthenticatedPrincipal,
+    hasAnyRole,
+} from './authenticated-principal';
 
-export const getAuthenticatedUser = (path: string = "/.auth/me") => fetch(path)
-    .then(r => r.json() as Promise<AuthenticatedPrincipal>)
+export {
+    Claim,
+    getClaimType,
+    getClaimValue,
+} from './claim';
 
-export const refreshAuthentication = (path: string = "/.auth/aad/refresh") => fetch(path)
-    .then(r => r.ok);
+export { 
+    getAuthenticatedUser, 
+    refreshAuthentication
+} from './fetch-api';
