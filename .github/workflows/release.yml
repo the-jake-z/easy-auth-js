@@ -36,10 +36,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
+          registry-url: 'https://registry.npmjs.org'
       - run: npm version ${{ steps.semver.outputs.new_tag }} --no-git-tag-version
       - run: npm ci
       - run: npm test
       - run: npm run build
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
