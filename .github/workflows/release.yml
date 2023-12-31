@@ -37,6 +37,7 @@ jobs:
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
+          scope: '@easy-auth-js'
       - run: npm version ${{ steps.semver.outputs.new_tag }} --no-git-tag-version
       - run: npm ci
       - run: npm test
