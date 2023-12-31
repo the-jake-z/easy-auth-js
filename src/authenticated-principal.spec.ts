@@ -65,6 +65,10 @@ describe('Authenticated Principal', () => {
             expect(getClaimsByName(principal, 'dne')).toStrictEqual([]);
         });
 
+        test('return empty array when no user claims', () => {
+           expect(getClaimsByName({} as unknown as AuthenticatedPrincipal, 'dne')).toStrictEqual([]); 
+        });
+
         test('return array of matching claims', () => {
             expect(getClaimsByName(principal, 'color')).toStrictEqual([
                 claimBuilder('color', 'red'),

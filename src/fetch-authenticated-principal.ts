@@ -5,5 +5,4 @@ export const getAuthenticatedUser = (path: string = "/.auth/me") => fetch(path)
     .catch(() => undefined);
 
 export const refreshAuthentication = (path: string = "/.auth/aad/refresh") => fetch(path)
-    .then(r => r.ok)
-    .catch(() => false);
+    .then(r => r.ok);

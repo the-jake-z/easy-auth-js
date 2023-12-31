@@ -34,6 +34,4 @@ on Github.
 
 # TODO List:
 
-- Unit Tests
-- Sample library w/ IaC support 
-- 
+- Sample library w/ IaC 
