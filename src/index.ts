@@ -1,8 +1,8 @@
 export {
-    getClaimByName,
-    getIdTokenExpiration,
-    getClaimsByName,
     AuthenticatedPrincipal,
+    getClaimByName,
+    getClaimsByName,
+    getIdTokenExpiration,
     hasAnyRole,
 } from './authenticated-principal';
 
@@ -15,4 +15,4 @@ export {
 export { 
     getAuthenticatedUser, 
     refreshAuthentication
-} from './fetch-api';
+} from './fetch-authenticated-principal';

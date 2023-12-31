@@ -1,13 +1,17 @@
 {
-  "name": "easy-auth-js",
+  "name": "@easy-auth-js/easy-auth",
   "version": "0.0.1",
   "description": "Allows browser based applications to access authentication information from Azure Easy Authentication endpoints",
   "scripts": {
     "clean": "rm -rf ./dist",
-    "compile": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
+    "build": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
     "test": "test"
   },
-  "author": "@the-jake-z",
+  "author": {
+    "name": "Jake Z",
+    "email": "sponges.stoles0d@icloud.com",
+    "url": "https://github.com/the-jake-z"
+  },
   "license": "MIT",
   "devDependencies": {
     "typescript": "5.3"
@@ -40,5 +44,16 @@
       "default": "./dist/esm/index.js"
     },
     "./package.json": "./package.json"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/the-jake-z/easy-auth-js"
+  },
+  "keywords": [
+    "authentication",
+    "azure",
+    "app service",
+    "easy authentication",
+    "msal"
+  ]
 }

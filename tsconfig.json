@@ -19,6 +19,6 @@
       "easy-auth-js": ["./index"],
     }
   },
-  "include": ["./**/*.ts"],
+  "include": ["./src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
