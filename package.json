@@ -1,6 +1,6 @@
 {
   "name": "@easy-auth-js/easy-auth",
-  "version": "0.0.4",
+  "version": "0.0.0",
   "description": "Allows browser based applications to access authentication information from Azure Easy Authentication endpoints",
   "scripts": {
     "clean": "rm -rf ./dist",
