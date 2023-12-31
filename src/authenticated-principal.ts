@@ -24,7 +24,7 @@ export const getClaimByName = (principal: AuthenticatedPrincipal, name: string) 
 }
 
 export const hasAnyRole = (principal: AuthenticatedPrincipal, rolesToCheck: string[]) => 
-    getClaimsByName(principal, 'role').map(getClaimValue).some(userRole => rolesToCheck.indexOf(userRole) > -1);
+    getClaimsByName(principal, 'roles').map(getClaimValue).some(userRole => rolesToCheck.indexOf(userRole) > -1);
 
 export const getIdTokenExpiration = (principal: AuthenticatedPrincipal) => {
     const jwtParts = principal.id_token?.split(".");

@@ -9,6 +9,7 @@
     "moduleResolution": "node",
     "stripInternal": true,
     "noEmit": false,
+    "esModuleInterop": true,
     "lib": [
       "esnext",
       "dom"
