@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.types.json",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "author": {
     "name": "Jake Z",
