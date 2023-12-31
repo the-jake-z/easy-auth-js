@@ -15,7 +15,8 @@ on:
 
 jobs:
 
-  build:
+  release:
+    name: Release to NPM
     runs-on: ubuntu-latest
     permissions:
         contents: write
