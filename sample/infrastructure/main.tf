@@ -34,7 +34,7 @@ resource "azurerm_windows_web_app" "easy_auth_sample" {
 
     active_directory_v2 {
       client_id = azuread_application.easy_auth_sample.application_id
-      tenant_auth_endpoint = "https://login.microsoftonline.com/v2.0/${var.azure_tenant_id}/"
+      tenant_auth_endpoint = "https://login.microsoftonline.com/${var.azure_tenant_id}/v2.0"
       client_secret_setting_name = "aad_secret"
     }
 
