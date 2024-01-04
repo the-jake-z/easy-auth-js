@@ -32,6 +32,5 @@ This library is still a work in progress, if you are interested in
 contributing or improvements, please open an issue or pull request
 on Github.
 
-# TODO List:
-
-- Sample library w/ IaC 
+# TODO List: 
+- README Tutorial 
