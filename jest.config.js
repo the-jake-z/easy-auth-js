@@ -3,6 +3,6 @@ module.exports = {
     testEnvironment: 'node',
     collectCoverage: true,
     coverageReporters: ["json", "html"],
-    testRegex: '/src/.*\\.(test|spec)?\\.(ts|tsx)$',
+    testRegex: '.*\\.(test|spec)?\\.(ts|tsx)$',
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
 };
