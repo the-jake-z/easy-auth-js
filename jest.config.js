@@ -4,5 +4,6 @@ module.exports = {
     collectCoverage: true,
     coverageReporters: ["json", "html"],
     testRegex: '.*\\.(test|spec)?\\.(ts|tsx)$',
-    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
+    testPathIgnorePatterns: ["sample", "node_modules"],
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 };
