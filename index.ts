@@ -1,5 +1,6 @@
 export {
     AuthenticatedPrincipal,
+    getAccessTokenClaim,
     getClaimByName,
     getClaimsByName,
     getIdTokenExpiration,
@@ -14,5 +15,5 @@ export {
 
 export { 
     getAuthenticatedUser, 
-    refreshAuthentication
+    refreshAuthentication,
 } from './fetch-authenticated-principal';

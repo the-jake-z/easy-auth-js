@@ -1,4 +1,4 @@
-import { AuthenticatedPrincipal, getClaimByName, getClaimsByName, getIdTokenExpiration, hasAnyRole } from "./authenticated-principal";
+import { AuthenticatedPrincipal, getAccessTokenClaim, getClaimByName, getClaimsByName, getIdTokenExpiration, hasAnyRole } from "./authenticated-principal";
 
 describe('Authenticated Principal', () => {
     
@@ -96,6 +96,22 @@ describe('Authenticated Principal', () => {
 
         test('returns undefined when id_token is undefined', () => {
             expect(getIdTokenExpiration({ } as unknown as AuthenticatedPrincipal)).toBeUndefined();
+        });
+    });
+
+    describe('getAccessTokenClaim', () => {
+        const jwtPayload = {
+            roles: ['Claim1', 'Claim2']
+        };
+
+        const access_token = `h.${btoa(JSON.stringify(jwtPayload))}.s`;
+
+        const principal: AuthenticatedPrincipal = {
+            access_token
+        } as AuthenticatedPrincipal;
+
+        test('should return claims from access token', () => {
+            expect(getAccessTokenClaim(principal, 'roles')).toEqual(['Claim1', 'Claim2']);
         });
     });
 });
