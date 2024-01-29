@@ -35,3 +35,7 @@ export const getIdTokenExpiration = (principal: AuthenticatedPrincipal) => {
 
     return new Date(JSON.parse(atob(jwtParts[1]))['exp']);
 }
+
+export const getAccessTokenClaim = <T> (principal: AuthenticatedPrincipal, claim: string): T => {
+    return JSON.parse(atob(principal.access_token.split(".")[1]))[claim]
+}
