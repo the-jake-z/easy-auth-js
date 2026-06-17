@@ -18,8 +18,10 @@ jobs:
   release:
     name: Release to NPM
     runs-on: ubuntu-latest
+    environment: Release
     permissions:
         contents: write
+        id-token: write
     steps:
       - uses: actions/checkout@v6.0.3
         with:
@@ -44,5 +46,3 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
