@@ -3,14 +3,14 @@ import { getAuthenticatedUser, refreshAuthentication } from "./fetch-authenticat
 describe('Fetch Authenticated Principal', () => {
 
     const setupSuccessFetch = (expectedResponse: unknown) => {
-        global.fetch = jest.fn(() => Promise.resolve({
+        (globalThis as any).fetch = jest.fn(() => Promise.resolve({
             json: () => Promise.resolve(expectedResponse),
             ok: true,
         })) as any;
     }
 
     const setupFailureFetch = (expectedError: unknown) => {
-        global.fetch = jest.fn(() => Promise.resolve({
+        (globalThis as any).fetch = jest.fn(() => Promise.resolve({
             json: () => Promise.reject(expectedError),
             ok: false,
         })) as any;
@@ -121,7 +121,7 @@ describe('Fetch Authenticated Principal', () => {
             expect(result).toBeTruthy();
         });
 
-        test('when is failuure', async () => {
+        test('when is failure', async () => {
             setupFailureFetch("failure");
             var result = await refreshAuthentication();
             expect(result).toBeFalsy();
