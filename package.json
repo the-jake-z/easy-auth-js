@@ -51,6 +51,9 @@
     "type": "git",
     "url": "https://github.com/the-jake-z/easy-auth-js"
   },
+  "overrides": {
+    "js-yaml": "^4.2.0"
+  },
   "keywords": [
     "authentication",
     "azure",
