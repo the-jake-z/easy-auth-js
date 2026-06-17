@@ -79,9 +79,9 @@ describe('Authenticated Principal', () => {
     });
 
     describe('getIdTokenExpiration', () => {
-        const date = new Date();
+        const date = new Date(Math.floor(Date.now() / 1000) * 1000);
         const jwtPayload = {
-            exp: date.getTime(),
+            exp: date.getTime() / 1000,
         };
 
         const id_token = `h.${btoa(JSON.stringify(jwtPayload))}.s`;

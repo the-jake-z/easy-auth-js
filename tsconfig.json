@@ -10,16 +10,13 @@
     "stripInternal": true,
     "noEmit": false,
     "esModuleInterop": true,
+    "types": ["jest"],
     "lib": [
       "esnext",
       "dom"
     ],
-    "target": "esnext",
-    "baseUrl": ".",
-    "paths": {
-      "easy-auth-js": ["./index"],
-    }
+    "target": "esnext"
   },
-  "include": ["./**/*.ts"],
-  "exclude": ["node_modules", "dist", "./**/*.spec.ts", "sample"]
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "sample"]
 }

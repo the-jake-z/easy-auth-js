@@ -33,7 +33,7 @@ export const getIdTokenExpiration = (principal: AuthenticatedPrincipal) => {
         return undefined;
     }
 
-    return new Date(JSON.parse(atob(jwtParts[1]))['exp']);
+    return new Date(JSON.parse(atob(jwtParts[1]))['exp'] * 1000);
 }
 
 export const getAccessTokenClaim = <T> (principal: AuthenticatedPrincipal, claim: string): T => {
